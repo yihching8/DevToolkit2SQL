@@ -20,6 +20,18 @@ where
     timestamp > "2020-01-01"
     and b.title = "Lord of the Rings";
 
+--2a
+
+select
+    p.*,
+    b.title as Titles
+from
+    purchases as p
+    left join books as b on p.book_id = b.ISBN
+where
+    timestamp > "2020-01-01"
+    and b.title = "Lord of the Rings";
+
 --3. find how many books has each customer 
 --purchased for each year
 select
